@@ -6,8 +6,7 @@ print((" Hello World\n")*4)
 # Exercice 2
 #Write code that calculates the result of:
 
-result = (99**3)*8
-print(result)
+print((99 ** 3) * 8)
 
 # Exercice 3
 #Predict the output of the following code snippets:
