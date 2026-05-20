@@ -22,7 +22,7 @@ print((99 ** 3) * 8)
 #Create a variable called computer_brand and assign it the value of your computer brand. Then print a sentence that says "I have a [computer_brand] computer".
 
 computer_brand = "Lenovo"
-print("I have a " + computer_brand + " computer")
+print(f"I have a {computer_brand} computer")
 # Exercise 5
 name = "Soro"
 age = 29
@@ -41,22 +41,32 @@ if a > b:
 # Exercise 7
 #Write code that asks the user for a number and determines if the number is even or odd. Print "The number is even" or "The number is odd" accordingly.
 
-number = input("Enter a number: ")
-if int(number) % 2 == 0:
-    print("The number is even")
-else:
-    print("The number is odd")
+try:
+    number = int(input("Enter a number: "))
+    if number % 2 == 0:
+        print("The number is even")
+    else:
+        print("The number is odd")
+except ValueError:
+    print("Invalid input. Please enter a whole number.")
 
 # Exercise 8
+#Compare the user's name with your own name.
 
+my_name = "Soro"
 user_name = input("Enter your name: ")
-if user_name == "Alice" or user_name == "Bob":
-    print("Welcome " + user_name)
+if user_name == my_name:
+    print(f"Welcome {user_name}")
+else:
+    print(f"Nice to meet you {user_name}, I'm {my_name}")
 
 # Exercise 9
 
-user_height = input("Enter your height in cm: ")
-if int(user_height) >145:
-    print("You are tall enough to ride")
-else:
-    print("You need to grow some more to ride.")
+try:
+    user_height = int(input("Enter your height in cm: "))
+    if user_height > 145:
+        print("You are tall enough to ride")
+    else:
+        print("You need to grow some more to ride.")
+except ValueError:
+    print("Invalid input. Please enter a whole number.")
