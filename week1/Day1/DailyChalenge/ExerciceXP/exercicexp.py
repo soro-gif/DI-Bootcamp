@@ -46,11 +46,15 @@ if int(number) % 2 == 0:
     print("The number is even")
 else:
     print("The number is odd")
+
 # Exercise 8
+
 user_name = input("Enter your name: ")
 if user_name == "Alice" or user_name == "Bob":
     print("Welcome " + user_name)
+
 # Exercise 9
+
 user_height = input("Enter your height in cm: ")
 if int(user_height) >145:
     print("You are tall enough to ride")

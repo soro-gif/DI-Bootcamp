@@ -21,10 +21,14 @@ for i in range(1, length + 1):
 print("List of multiples:", multiples)
 
 #Challenge 2 : Remove Consecutive Duplicate Letters
-
 word = input("Enter a word: ")
-result = word[0]
-for letter in word[1:]:
-    if letter != result[-1]:
-        result += letter
-print(result)
+if not word:
+    print("")
+else:
+    result = word[0]
+    for letter in word[1:]:
+        if letter != result[-1]:
+            result += letter
+    print(result)
+
+# 
