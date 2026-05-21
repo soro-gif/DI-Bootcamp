@@ -1,75 +1,79 @@
-# Exercise 1
-#Print the following output using one line of code:
+# Exercise 1: Convert Lists to Dictionaries
 
-print((" Hello World\n")*4)
+# Method 1: Using zip()
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
 
-# Exercise 2
-#Write code that calculates the result of:
+# Convert lists to dictionary using zip()
+result = dict(zip(keys, values))
+print("Method 1 (using zip()):")
+print(result)
 
-print((99 ** 3) * 8)
+# Method 2: Using dictionary comprehension
+result2 = {k: v for k, v in zip(keys, values)}
+print("\nMethod 2 (using dictionary comprehension):")
+print(result2)
 
-# Exercise 3
-#Predict the output of the following code snippets:
-#Comment what is your guess, then run the code and compare
 
-5 < 3 # False
-3 == 3 # True
-3 == "3" # False
-"3" > 3 # TypeError
-"Hello" == "hello" # False
 
-# Exercise 4
-#Create a variable called computer_brand and assign it the value of your computer brand. Then print a sentence that says "I have a [computer_brand] computer".
+# Exercise 2: Cinemax #2 - Movie Ticket Pricing
 
-computer_brand = "Lenovo"
-print(f"I have a {computer_brand} computer")
-# Exercise 5
-name = "Soro"
-age = 29
-shoe_size = 43
-info = f"My name is {name}, I am {age} years old and my shoe size is {shoe_size}"
-print(info)
 
-# Exercise 6
-#Create two variables, a and b. Assign them any number values you want. Write code that checks if a is greater than b. If it is, print "Hello World".
+family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
 
-a = 5
-b = 3
-if a > b:
-    print("Hello World")
+# Ticket pricing rules:
+# Less than 3 years: free
+# 3 to 12 years: $10
+# More than 12 years: $15
 
-# Exercise 7
-#Write code that asks the user for a number and determines if the number is even or odd. Print "The number is even" or "The number is odd" accordingly.
+print("=== BASIC SOLUTION ===\n")
 
-try:
-    number = int(input("Enter a number: "))
-    if number % 2 == 0:
-        print("The number is even")
+total_cost = 0
+
+for member, age in family.items():
+    if age < 3:
+        ticket_price = 0
+    elif 3 <= age <= 12:
+        ticket_price = 10
     else:
-        print("The number is odd")
-except ValueError:
-    print("Invalid input. Please enter a whole number.")
+        ticket_price = 15
+    
+    print(f"{member}'s ticket: ${ticket_price}")
+    total_cost += ticket_price
 
-# Exercise 8
-#Compare the user's name with your own name.
+print(f"\nTotal cost: ${total_cost}")
 
-my_name = "Soro"
-user_name = input("Enter your name: ")
-if user_name == my_name:
-    print(f"Welcome {user_name}")
-else:
-    print(f"Nice to meet you {user_name}, I'm {my_name}")
+# Bonus: Interactive version with user input
+print("\n=== BONUS: INTERACTIVE VERSION ===\n")
 
-# Exercise 9
+family_interactive = {}
+total_interactive = 0
 
-try:
-    user_height = int(input("Enter your height in cm: "))
-    if user_height > 145:
-        print("You are tall enough to ride")
+while True:
+    name = input("Enter family member's name (or 'done' to finish): ")
+    if name.lower() == 'done':
+        break
+    
+    try:
+        age = int(input(f"Enter {name}'s age: "))
+        family_interactive[name] = age
+    except ValueError:
+        print("Please enter a valid age.")
+        continue
+
+print("\n--- Ticket Prices ---")
+for member, age in family_interactive.items():
+    if age < 3:
+        ticket_price = 0
+    elif 3 <= age <= 12:
+        ticket_price = 10
     else:
-        print("You need to grow some more to ride.")
-except ValueError:
-    print("Invalid input. Please enter a whole number.")
+        ticket_price = 15
+    
+    print(f"{member}'s ticket: ${ticket_price}")
+    total_interactive += ticket_price
+
+print(f"\nTotal cost: ${total_interactive}")
 
 # Exercise 3: Zara - Dictionary Manipulation
 
