@@ -10,7 +10,7 @@ for i, lettre in enumerate(mot):
 
 print(index_dict)
 
-# Daily Challenge - 2
+# Daily Challenge - 2  
 
 
 items_purchase = {
