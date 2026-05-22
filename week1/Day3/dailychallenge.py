@@ -47,7 +47,6 @@ class Farm:
     def get_short_info(self):
         """
         Return a short sentence describing the farm and its animals.
-        Example: "La ferme de McDonald possède des vaches, des chèvres et des moutons."
         """
         animal_types = self.get_animal_types()
         
@@ -59,15 +58,15 @@ class Farm:
             animal_name = animal if count == 1 else animal + "s"
             animal_list.append("des " + animal_name)
         
-        # Join with commas and 'et' before the last item
+        # Join with commas and 'and' before the last item
         if len(animal_list) == 0:
             animals_str = ""
         elif len(animal_list) == 1:
             animals_str = animal_list[0]
         else:
-            animals_str = ", ".join(animal_list[:-1]) + " et " + animal_list[-1]
+            animals_str = ", ".join(animal_list[:-1]) + " and " + animal_list[-1]
         
-        return f"La ferme de {self.name} possède {animals_str}."
+        return f"{self.name} 's farm has {animals_str}."
 
 
 # Test the code
