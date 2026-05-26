@@ -1,0 +1,62 @@
+[
+    {
+        "Name":"Alice",
+        "Age":28,
+        "City":"New York",
+        "Score":88.5
+    },
+    {
+        "Name":"Bob",
+        "Age":34,
+        "City":"Chicago",
+        "Score":72.0
+    },
+    {
+        "Name":"Charlie",
+        "Age":22,
+        "City":"Houston",
+        "Score":95.3
+    },
+    {
+        "Name":"Diana",
+        "Age":45,
+        "City":"Phoenix",
+        "Score":61.8
+    },
+    {
+        "Name":"Ethan",
+        "Age":31,
+        "City":"Los Angeles",
+        "Score":84.2
+    },
+    {
+        "Name":"Fatima",
+        "Age":27,
+        "City":"San Diego",
+        "Score":90.1
+    },
+    {
+        "Name":"Georges",
+        "Age":38,
+        "City":"Dallas",
+        "Score":55.4
+    },
+    {
+        "Name":"Hana",
+        "Age":24,
+        "City":"Austin",
+        "Score":78.6
+    },
+    {
+        "Name":"Ibrahim",
+        "Age":52,
+        "City":"Seattle",
+        "Score":66.9
+    },
+    {
+        "Name":"Julia",
+        "Age":29,
+        "City":"Denver",
+        "Score":93.0
+    }
+]
